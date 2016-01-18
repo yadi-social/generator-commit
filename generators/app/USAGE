@@ -1,0 +1,5 @@
+Description:
+    Commit currect changes.
+
+Example:
+    yo commit [opt. --add]

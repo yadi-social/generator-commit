@@ -1,0 +1,35 @@
+{
+  "name": "generator-commit",
+  "description": "Yeoman generator: YADI commit structure ( used https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md )",
+  "version": "1.0.0",
+  "main": "generators/app/index.js",
+  "files": [
+    "generators/app"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yadi-social/generator-commit.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "git",
+    "commit",
+    "yadi"
+  ],
+  "author": "Dzmitry Khadorkin <dzmitry@khadorkin.by>",
+  "license": "MIT",
+  "bugs": "https://github.com/yadi-social/generator-commit/issues",
+  "homepage": "https://github.com/yadi-social/generator-commit",
+  "contributors": [
+    {
+      "name": "Dzmitry Khadorkin",
+      "email": "dzmitry@khadorkin.by"
+    }
+  ],
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "mkdirp": "^0.5.1",
+    "update-notifier": "^0.3.1",
+    "yeoman-generator": "^0.22.2"
+  }
+}

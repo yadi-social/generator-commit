@@ -1,0 +1,13 @@
+{
+  "generator-commit": {
+    "type": "feat",
+    "funtip": [
+      ":art:",
+      ":memo:",
+      ":arrow_up:"
+    ],
+    "subject": "initial commit",
+    "body": "",
+    "footer": ""
+  }
+}
