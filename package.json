@@ -1,7 +1,7 @@
 {
   "name": "generator-commit",
   "description": "Yeoman generator: YADI commit structure ( used https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md )",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "generators/app/index.js",
   "files": [
     "generators/app"

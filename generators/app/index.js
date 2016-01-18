@@ -28,8 +28,6 @@ module.exports = generators.Base.extend( {
     git: function(){
         var done = this.async();
         if ( this.config.get( 'add' ) ) {
-            console.log( 'yes' );
-
             exec( 'git add -A', function( err, stdout ) {
                 console.log( 'Added all files to git staging area\n', stdout );
             } );
