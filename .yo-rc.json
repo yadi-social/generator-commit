@@ -1,12 +1,11 @@
 {
   "generator-commit": {
-    "type": "feat",
+    "add": true,
+    "type": "fix",
     "funtip": [
-      ":art:",
-      ":memo:",
-      ":arrow_up:"
+      ":bug:"
     ],
-    "subject": "initial commit",
+    "subject": "fix \"git add\" functionality",
     "body": "",
     "footer": ""
   }

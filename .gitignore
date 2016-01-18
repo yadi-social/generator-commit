@@ -29,4 +29,5 @@ $RECYCLE.BIN/
 node_modules/
 npm-debug.log
 .tmp
+.yo-rc.json
 build

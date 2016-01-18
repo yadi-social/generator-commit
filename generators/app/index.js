@@ -28,11 +28,13 @@ module.exports = generators.Base.extend( {
     git: function(){
         var done = this.async();
         if ( this.config.get( 'add' ) ) {
+            console.log( 'yes' );
+
             exec( 'git add -A', function( err, stdout ) {
                 console.log( 'Added all files to git staging area\n', stdout );
             } );
         }
-        exec( 'git commit -m "' + this.config.get( 'funtip' ).join( '' ) + this.config.get( 'type' ) + ': ' + this.config.get( 'subject' ) + '" -m "' + this.config.get( 'body' ) + '" -m "' + this.config.get( 'footer' ) + '"', function( err, stdout ) {
+        exec( 'git commit -m "' + this.config.get( 'funtip' ).join( ' ' ) + ' ' + this.config.get( 'type' ) + ': ' + this.config.get( 'subject' ) + '" -m "' + this.config.get( 'body' ) + '" -m "' + this.config.get( 'footer' ) + '"', function( err, stdout ) {
             console.log( 'Commited!\n', stdout );
         } );
         done();
