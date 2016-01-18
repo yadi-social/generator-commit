@@ -1,11 +1,9 @@
 {
   "generator-commit": {
     "add": true,
-    "type": "fix",
-    "funtip": [
-      ":bug:"
-    ],
-    "subject": "fix \"git add\" functionality",
+    "type": "chore",
+    "funtip": [],
+    "subject": "add \".npmignore\"",
     "body": "",
     "footer": ""
   }
