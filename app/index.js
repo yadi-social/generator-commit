@@ -1,6 +1,6 @@
 var exec = require( 'child_process' ).exec;
 var generators = require( 'yeoman-generator' );
-var util = require( '../../util' );
+var util = require( './util/' );
 var prompts = require( './prompts' );
 // Check outdated dependences
 util.updater();
@@ -12,14 +12,11 @@ module.exports = generators.Base.extend( {
     },
     prompting: function() {
         var done = this.async();
-        if ( this.options.add ) {
-            this.config.set( 'add', this.options.add );
-        }
         // Update config
         this.prompt( prompts, ( function fn( answers ) {
             for ( var key in answers ) {
                 if ( answers.hasOwnProperty( key ) && ( answers[ key ] != null ) ) {
-                    this.config.set( key, answers[ key ] );
+                    this.options[ key ] = answers[ key ];
                 }
             }
             done();
@@ -27,16 +24,14 @@ module.exports = generators.Base.extend( {
     },
     git: function(){
         var done = this.async();
-        if ( this.config.get( 'add' ) ) {
-            exec( 'git add -A', function( err, stdout ) {
-                console.log( 'Added all files to git staging area\n', stdout );
-            } );
+        var string = '';
+        if ( this.options.add ) {
+            string += 'git add -A && ';
         }
-        exec( 'git commit -m "' + this.config.get( 'funtip' ).join( ' ' ) + ' ' + this.config.get( 'type' ) + ': ' + this.config.get( 'subject' ) + '" -m "' + this.config.get( 'body' ) + '" -m "' + this.config.get( 'footer' ) + '"', function( err, stdout ) {
+        string += 'git commit -m "' + this.options.funtip.join( ' ' ) + ' ' + this.options.type + ': ' + this.options.subject + '" -m "' + this.options.body + '" -m "' + this.options.footer + '"';
+        exec( string, function( err, stdout ) {
             console.log( 'Commited!\n', stdout );
         } );
         done();
-    },
-    end: function() {
     }
 } );

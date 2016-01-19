@@ -1,5 +1,5 @@
 var updateNotifier = require( 'update-notifier' );
-var pkg = require( '../package.json' );
+var pkg = require( './../../package.json' );
 module.exports = function updater() {
     var notifier = updateNotifier( {
         // Check per 1 day
